@@ -1,1 +1,68 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #F9F8FF;
+  --card: #E9E5FF;
+  --text: #1E1B2E;
+  --text-secondary: #4B445B;
+  --accent: #7C3AED;
+  --hover: #A78BFA;
+  --success: #4A6CF7;
+  --error: #DC2626;
+  --warning: #F59E0B;
+  
+}
+
+.dark {
+  --background: #1E1B2E;
+  --card: #2C2545;
+  --text: #EDEDED;
+  --text-secondary: #B9B6C9;
+  --accent: #A259FF;
+  --hover: #C084FC;
+  --success: #4A6CF7;
+  --error: #F87171;
+  --warning: #FBBF24;
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+
+.text-accent { color: var(--text-accent); }
+.text-hover { color: var(--text-hover); }
+
+.text-main {
+  color: var(--text);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.hover-bg-accent:hover {
+  background-color: var(--hover);
+}
+
+.text-success {
+  color: var(--success);
+}
+
+.text-error {
+  color: var(--error);
+}
+
+.text-warning {
+  color: var(--warning);
+}
