@@ -1,18 +1,16 @@
-import Navbar from '../components/Navbar'
-import Section from '../components/Section'
+import Navbar from '../components/Home/Navbar'
+import Section from '../components/Home/Section'
 
 function Hero() {
   return (
-    <section className="h-screen flex flex-col" id='home'>
-      <div className="h-[10%]">
-        <Navbar />
-      </div>
+    <section className="h-screen flex flex-col" id='about'>
 
-      <div className="flex-1">
+      <Navbar />
+
+      <div className="flex-1 py-5">
         <Section />
-      </div>
 
-      
+      </div>
     </section>
   )
 }
