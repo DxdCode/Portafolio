@@ -1,6 +1,6 @@
 import { Sun, Moon, Languages } from "lucide-react";
-import useDarkMode from "../../hooks/useDarkMode";
-import { useLanguageContext } from "../../context/LanguageContext";
+import useDarkMode from "../hooks/useDarkMode";
+import { useLanguageContext } from "../context/LanguageContext";
 import { motion, useScroll, useSpring } from "framer-motion";
 
 function Navbar() {
@@ -70,6 +70,7 @@ function Navbar() {
           <button
             className="text-[20px] sm:text-xl cursor-pointer hover:scale-125 duration-300"
             onClick={toggleDarkMode}
+             aria-label="Cambiar tema"
           >
             {darkMode ? (
               <Sun className="" size={20} />
@@ -80,6 +81,7 @@ function Navbar() {
           <button
             className="text-[20px] sm:text-xl cursor-pointer hover:scale-125 duration-300"
             onClick={toggleLanguage}
+             aria-label="Cambiar idioma"
           >
             <Languages size={22} />
           </button>

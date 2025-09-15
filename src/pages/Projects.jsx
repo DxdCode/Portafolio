@@ -1,5 +1,4 @@
-import ProjectCard from '../components/Projects/ProjectCard';
-import { projects } from '../data/projects';
+import ProjectCard from '../components/ProjectCard';
 import { useLanguageContext } from '../context/LanguageContext';
 
 function Projects() {

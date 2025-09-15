@@ -1,13 +1,12 @@
-import { sectionData } from '../../data/sectionData'
-import { useLanguageContext } from '../../context/LanguageContext'
+import { sectionData } from '../data/sectionData';
+import { useLanguageContext } from '../context/LanguageContext';
 import { ChevronDown } from "lucide-react";
-
-import { GitHubIcon, LinkedInIcon, ReactIcon } from '../Icons'
-import { motion } from "framer-motion"
+import { GitHubIcon, LinkedInIcon } from './Icons';
+import { motion } from "framer-motion";
 
 function Section() {
-    const { language } = useLanguageContext()
-    const data = sectionData[language]
+    const { language } = useLanguageContext();
+    const data = sectionData[language];
 
     return (
         <section className="relative w-full h-full flex flex-col items-center justify-center bg-background overflow-hidden">
@@ -16,8 +15,6 @@ function Section() {
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]">
                 </div>
-
-
             </div>
 
             {/* Contenido */}
@@ -26,7 +23,8 @@ function Section() {
                 {/* Título */}
                 <motion.div
                     initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-main mb-3 sm:mb-4">{data.title}</h1>
@@ -36,9 +34,10 @@ function Section() {
                 {/* Descripción */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
-                    className="max-w-xs sm:max-w-md md:max-w-2xl text-main sm:text-lg text-start "
+                    className="max-w-xs sm:max-w-md md:max-w-2xl text-main sm:text-lg text-start"
                 >
                     <p>{data.description}</p>
                 </motion.div>
@@ -46,13 +45,13 @@ function Section() {
                 {/* Contacto */}
                 <motion.div
                     initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: false, amount: 0.3 }}
                     transition={{ delay: 0.6, duration: 0.8 }}
                     className="flex flex-row gap-8"
                 >
                     <LinkedInIcon href="https://www.linkedin.com/in/itsdavidd/" className={"hover:scale-125 ease-in duration-200"} />
                     <GitHubIcon href="https://github.com/DxdCode" className={"dark:text-white hover:scale-125 ease-in duration-200"} />
-                    <ReactIcon></ReactIcon>
                 </motion.div>
             </div>
 
@@ -64,10 +63,11 @@ function Section() {
             {/* Nube SVG decorativa */}
             <motion.svg
                 initial={{ x: -100, opacity: 0 }} 
-                animate={{ x: 0, opacity: 1, y: [0, -10, 0] }} 
+                whileInView={{ x: 0, opacity: 1, y: [0, -10, 0] }} 
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{
                     x: { type: "spring", stiffness: 80, damping: 20 },
-                    y: { repeat: Infinity, duration: 2, ease: "easeInOut", repeatType: "loop" }, 
+                    y: { repeat: Infinity, duration: 2, ease: "easeInOut", repeatType: "loop" },
                     opacity: { duration: 1 } 
                 }}
                 className="absolute top-20 sm:top-40 w-30 h-30 sm:w-28 sm:h-28 text-[#1E1B2E] dark:text-[#F9F8FF]"
@@ -77,9 +77,8 @@ function Section() {
                 <path d="M20 30a10 10 0 1 1 20 0h10a5 5 0 0 1 0 10H20a10 10 0 0 1 0-20z" />
             </motion.svg>
 
-
         </section>
     )
 }
 
-export default Section
+export default Section;

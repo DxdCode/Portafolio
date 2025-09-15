@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { projects } from "../../data/projects";
-import { useLanguageContext } from "../../context/LanguageContext";
+import { projects } from "../data/projects";
+import { useLanguageContext } from "../context/LanguageContext";
 
 function ProjectCard() {
   const { language } = useLanguageContext();
@@ -13,10 +13,10 @@ function ProjectCard() {
           key={project.id}
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.3 }} 
           transition={{ duration: 0.5, delay: index * 0.1 }}
           whileHover={{ scale: 1.03, rotate: 0.5 }}
-          className="bg-card rounded-2xl shadow-xl p-4 sm:p-4 flex flex-col h-full"
+          className="bg-card rounded-2xl shadow-xl p-4 sm:p-4 flex flex-col h-full cursor-pointer"
         >
           {project.image && (
             <div className="w-full h-48 sm:h-56 mb-4 rounded-2xl overflow-hidden shadow-md">

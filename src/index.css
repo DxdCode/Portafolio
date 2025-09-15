@@ -41,7 +41,9 @@
 .bg-card {
   background-color: var(--card);
 }
-
+.text-card {
+  background-color: var(--card);
+}
 
 .text-accent {
   color: var(--text-accent);
