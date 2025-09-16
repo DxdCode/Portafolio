@@ -1,3 +1,0 @@
-name = "dxdcode"
-compatibility_date = "2024-09-15"
-assets = { directory = "dist"}

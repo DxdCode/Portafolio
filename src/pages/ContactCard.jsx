@@ -66,7 +66,7 @@ export default function ContactCard() {
             viewport={{ once: false, amount: 0.3 }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
           >
-            <img src={LinuxImage} alt="Logo de Linux"  className="w-full h-full" loading="lazy" />
+            <img src={LinuxImage} alt="Logo de Linux" className="w-full h-full" loading="lazy" />
           </motion.div>
         </div>
 
@@ -78,7 +78,7 @@ export default function ContactCard() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col gap-4 bg-card p-6 rounded-2xl shadow-xl"
+          className="flex flex-col gap-4 bg-card p-6 rounded-2xl shadow-xl max-h-[440px]"
         >
           {/* Nombre y Email */}
           <div className="flex flex-col sm:flex-row gap-4">
@@ -103,7 +103,6 @@ export default function ContactCard() {
           </div>
 
           <div className="flex items-start gap-3 bg-background rounded-xl p-3 shadow">
-            <FileText className="w-6 h-6 mt-2 text-gray-500" />
             <textarea
               name={data.fields[2].name}
               placeholder={data.fields[2].placeholder}
@@ -116,7 +115,7 @@ export default function ContactCard() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-2 px-6 py-3 bg-accent text-white rounded-xl font-medium shadow-lg hover:bg-hover flex items-center justify-center gap-2 transition-colors text-base"
+            className="mt-2 px-6 py-3 bg-accent text-white rounded-xl font-medium shadow-lg hover:bg-hover flex items-center justify-center gap-2 transition-colors text-base cursor-pointer"
           >
             {data.button} <Send className="w-5 h-5" />
           </motion.button>
