@@ -1,32 +1,59 @@
+import img1 from '../assets/img1.webp';
+import img2 from '../assets/img2.webp';
+
+const subdata = {
+  matriculas: {
+    image: img1,
+    urls: {
+      link: "https://gestormatriculas.netlify.app/",
+      github: "https://github.com/DxdCode/GestionMatriculas"
+    },
+    technologies: {
+      tech: ["React", "Tailwind", "Zustand", "Node.js", "Express", "MongoDB"]
+    }
+  },
+  ecommerce: {
+    image: img1,
+    urls: {
+      link: "https://ecommerce-demo.netlify.app/",
+      github: "https://github.com/DxdCode/EcommerceDemo"
+    },
+    technologies: {
+      tech: ["React", "Tailwind", "Stripe API"]
+    }
+  },
+  portafolio: {
+    image: img2,
+    urls: {
+      link: "https://dxdcode.pages.dev/",
+      github: "https://github.com/DxdCode/Portafolio.git"
+    },
+    technologies: {
+      tech: ["React", "Tailwind", "Framer Motion", "Emailjs"]
+    }
+  }
+};
+
 export const projects = {
   en: {
     items: [
       {
         id: 1,
-        title: "My Portfolio",
-        description: "Personal portfolio built with React and TailwindCSS.",
-        image: "https://shorturl.at/bd8PP",
-        tech: ["React", "Tailwind", "Vite"],
-        link: "https://miportafolio.com",
-        github: "https://github.com/miusuario/portafolio"
+        title: "Enrollment Management",
+        description: "Allows you to manage student enrollment quickly and easily",
+        ...subdata.matriculas
       },
       {
         id: 2,
         title: "E-commerce Demo",
         description: "Online store project with a functional cart and Stripe API.",
-        image: "https://shorturl.at/bd8PP",
-        tech: ["React", "Redux", "Stripe API"],
-        link: "https://mi-ecommerce.com",
-        github: "https://github.com/miusuario/ecommerce"
+        ...subdata.ecommerce
       },
       {
         id: 3,
-        title: "E-commerce Demo",
-        description: "Online store project with a functional cart and Stripe API.",
-        image: "https://shorturl.at/bd8PP",
-        tech: ["React", "Redux", "Stripe API"],
-        link: "https://mi-ecommerce.com",
-        github: "https://github.com/miusuario/ecommerce"
+        title: "Portfolio",
+        description: "Personal portfolio showcasing projects and skills.",
+        ...subdata.portafolio
       }
     ]
   },
@@ -34,31 +61,21 @@ export const projects = {
     items: [
       {
         id: 1,
-        title: "Mi Portafolio",
-        description: "Portafolio personal creado con React y TailwindCSS.",
-        image: "https://shorturl.at/bd8PP",
-        tech: ["React", "Tailwind", "Vite"],
-        link: "https://miportafolio.com",
-        github: "https://github.com/miusuario/portafolio"
+        title: "Gestión de Matrículas",
+        description: "Permite administrar la matrícula de tus estudiantes de manera rápida y sencilla",
+        ...subdata.matriculas
       },
       {
         id: 2,
         title: "E-commerce Demo",
         description: "Proyecto de tienda online con carrito funcional y Stripe API.",
-        image: "https://shorturl.at/bd8PP",
-        tech: ["React", "Redux", "Stripe API"],
-        link: "https://mi-ecommerce.com",
-        github: "https://github.com/miusuario/ecommerce"
+        ...subdata.ecommerce
       },
-      ,
       {
         id: 3,
-        title: "E-commerce Demo",
-        description: "Online store project with a functional cart and Stripe API.",
-        image: "https://shorturl.at/bd8PP",
-        tech: ["React", "Redux", "Stripe API"],
-        link: "https://mi-ecommerce.com",
-        github: "https://github.com/miusuario/ecommerce"
+        title: "Portafolio",
+        description: "Portafolio personal con proyectos y habilidades.",
+        ...subdata.portafolio
       }
     ]
   }

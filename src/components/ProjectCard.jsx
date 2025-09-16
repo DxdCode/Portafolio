@@ -26,14 +26,14 @@ export default function ProjectCard() {
               <img
                 src={project.image}
                 alt={`${project.title} preview`}
-                title={`Imagen de vista previa de ${project.title}`}
+                title={`Vista previa de ${project.title}`}
                 onClick={() => setExpandedImage(project.image)}
                 className="w-full h-48 sm:h-56 object-cover rounded-2xl cursor-pointer"
               />
             )}
 
             {/* Título y descripción */}
-            <h3 className="text-xl sm:text-2xl font-semibold mb-2 text-main">
+            <h3 className="text-xl sm:text-2xl font-semibold my-2 sm:my-4 text-main">
               {project.title}
             </h3>
             <p className="mb-4 text-secondary flex-grow text-sm sm:text-base">
@@ -42,40 +42,40 @@ export default function ProjectCard() {
 
             {/* Tecnologías */}
             <div className="flex flex-wrap gap-2 mb-4 mt-auto">
-              {project.tech.map((tech, i) => (
+              {project.technologies?.tech?.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-2 sm:px-3 py-1 bg-accent text-main rounded-full text-xs sm:text-sm font-medium"
+                  className="px-[6px] py-1 bg-tecnologias text-white rounded-sm text-xs sm:text-sm tracking-tight"
                 >
                   {tech}
                 </span>
               ))}
             </div>
 
-            {/* Botones de acción */}
+            {/* Botones */}
             <div className="flex flex-row gap-2">
-              {project.github && (
+              {project.urls?.github && (
                 <a
-                  href={project.github}
+                  href={project.urls.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg shadow-lg text-center bg-accent text-main font-medium w-full sm:w-auto"
+                  className="px-4 py-2 rounded-lg shadow-lg text-center bg-accent text-white font-medium w-full sm:w-auto"
                   aria-label={`Ver código fuente de ${project.title}`}
                   title={`Ver código fuente de ${project.title}`}
                 >
-                  Código Fuente
+                  {language === "es" ? "Repositorio" : "Repository"}
                 </a>
               )}
-              {project.link && (
+              {project.urls?.link && (
                 <a
-                  href={project.link}
+                  href={project.urls.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 rounded-lg shadow-lg text-center bg-card text-main hover:bg-hover font-medium w-full sm:w-auto"
+                  className="px-4 py-2 rounded-lg shadow-lg text-center bg-button text-white font-medium w-full sm:w-auto"
                   aria-label={`Ver demo en vivo de ${project.title}`}
                   title={`Ver demo en vivo de ${project.title}`}
                 >
-                  Demo en Vivo
+                  {language === "es" ? "Demo en vivo" : "Live Demo"}
                 </a>
               )}
             </div>
