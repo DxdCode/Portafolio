@@ -1,5 +1,6 @@
 import img1 from '../assets/img1.webp';
 import img2 from '../assets/img2.webp';
+import img3 from '../assets/img3.webp';
 
 const subdata = {
   matriculas: {
@@ -13,13 +14,13 @@ const subdata = {
     }
   },
   ecommerce: {
-    image: img1,
+    image: img3,
     urls: {
-      link: "https://ecommerce-demo.netlify.app/",
-      github: "https://github.com/DxdCode/EcommerceDemo"
+      link: "https://documenter.getpostman.com/view/45748353/2sB2x6kX2Q",
+      github: "https://github.com/MateooMoran/ProyectoTesis/tree/main/Backend-Poli"
     },
     technologies: {
-      tech: ["React", "Tailwind", "Stripe API"]
+      tech: ["Node.js", "Express.js", "MongoDB", "Stripe", "Socket.IO", "Passport",]
     }
   },
   portafolio: {
@@ -51,7 +52,7 @@ export const projects = {
       },
       {
         id: 3,
-        title: "Portfolio",
+        title: "Portafolio",
         description: "Personal portfolio showcasing projects and skills.",
         ...subdata.portafolio
       }
