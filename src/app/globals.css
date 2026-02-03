@@ -13,7 +13,7 @@
   --success: #4A6CF7;
   --error: #DC2626;
   --warning: #F59E0B;
-  --tecnologias : #35353598;
+  --tecnologias: #35353598;
 }
 
 .dark {
@@ -27,13 +27,14 @@
   --success: #4A6CF7;
   --error: #F87171;
   --warning: #FBBF24;
-  --tecnologias : #949494a9;
+  --tecnologias: #949494a9;
 
 }
 
 .bg-tecnologias {
   background-color: var(--tecnologias);
 }
+
 .bg-background {
   background-color: var(--background);
 }
@@ -46,6 +47,7 @@
 .bg-card {
   background-color: var(--card);
 }
+
 .text-card {
   background-color: var(--card);
 }
@@ -85,9 +87,11 @@
 .text-warning {
   color: var(--warning);
 }
+
 .bg-button {
-   background-color: var(--success);
+  background-color: var(--success);
 }
+
 body {
   background-color: var(--background);
 
