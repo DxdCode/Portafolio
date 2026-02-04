@@ -26,7 +26,27 @@ const subdata = {
             github: "https://github.com/DxdCode/Portafolio.git"
         },
         technologies: {
-            tech: ["React", "Tailwind", "Framer Motion", "Emailjs"]
+            tech: ["Next.js", "React", "Tailwind", "Framer Motion", "Emailjs"]
+        }
+    },
+    ticketSystem: {
+        image: "/assets/ticket-system.png",
+        urls: {
+            link: "https://expo.dev/accounts/itsdavidd/projects/app-tickets/builds/4354a46a-b3f2-4084-abce-bf6259e08a3f", 
+            github: "https://github.com/DxdCode/app-ticket"
+        },
+        technologies: {
+            tech: ["Hono", "React Native", "Expo", "AWS SST", "Gemini AI"]
+        }
+    },
+    ecommercePrivate: {
+        image: "/assets/ecommerce-private.png",
+        urls: {
+            link: "https://ecoomerce-umber.vercel.app/",
+            github: "https://ecoomerce-umber.vercel.app/"
+        },
+        technologies: {
+             tech: ["Next.js 16", "PostgreSQL", "Railway", "Vercel", "Zod", "TypeScript"]
         }
     }
 };
@@ -34,6 +54,18 @@ const subdata = {
 export const projects = {
     en: {
         items: [
+             {
+                id: 4,
+                title: "Ticket System (AI)",
+                description: "Automated ticket priority system using Hono (backend) and React Native (frontend).",
+                ...subdata.ticketSystem
+            },
+            {
+                id: 5,
+                title: "Private E-commerce",
+                description: "Full-stack e-commerce with Next.js 16, PostgreSQL on Railway, and deployed on Vercel.",
+                ...subdata.ecommercePrivate
+            },
             {
                 id: 1,
                 title: "Enrollment Management",
@@ -49,13 +81,25 @@ export const projects = {
             {
                 id: 3,
                 title: "Portafolio",
-                description: "Personal portfolio showcasing projects and skills.",
+                description: "Personal portfolio showcasing projects and skills. Migrated to Next.js 16.",
                 ...subdata.portafolio
             }
         ]
     },
     es: {
         items: [
+             {
+                id: 4,
+                title: "Sistema de Tickets (IA)",
+                description: "Sistema automatizado de tickets con IA usando Hono (backend) y React Native (frontend).",
+                ...subdata.ticketSystem
+            },
+            {
+                id: 5,
+                title: "E-commerce Privado",
+                description: "E-commerce full-stack con Next.js 16, PostgreSQL en Railway y desplegado en Vercel.",
+                ...subdata.ecommercePrivate
+            },
             {
                 id: 1,
                 title: "Gestión de Matrículas",
@@ -71,7 +115,7 @@ export const projects = {
             {
                 id: 3,
                 title: "Portafolio",
-                description: "Portafolio personal con proyectos y habilidades.",
+                description: "Portafolio personal con proyectos y habilidades. Migrado a Next.js 16.",
                 ...subdata.portafolio
             }
         ]
