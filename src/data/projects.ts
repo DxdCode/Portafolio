@@ -30,7 +30,7 @@ const subdata = {
         }
     },
     ticketSystem: {
-        image: "/assets/ticket-system.png",
+        image: "/assets/image-celular.webp",
         urls: {
             link: "https://expo.dev/accounts/itsdavidd/projects/app-tickets/builds/4354a46a-b3f2-4084-abce-bf6259e08a3f", 
             github: "https://github.com/DxdCode/app-ticket"
@@ -40,7 +40,7 @@ const subdata = {
         }
     },
     ecommercePrivate: {
-        image: "/assets/ecommerce-private.png",
+        image: "/assets/image-ecomerce.jpeg",
         urls: {
             link: "https://ecoomerce-umber.vercel.app/",
             github: "https://ecoomerce-umber.vercel.app/"
@@ -62,7 +62,7 @@ export const projects = {
             },
             {
                 id: 5,
-                title: "Private E-commerce",
+                title: "E-commerce",
                 description: "Full-stack e-commerce with Next.js 16, PostgreSQL on Railway, and deployed on Vercel.",
                 ...subdata.ecommercePrivate
             },
@@ -96,7 +96,7 @@ export const projects = {
             },
             {
                 id: 5,
-                title: "E-commerce Privado",
+                title: "E-commerce",
                 description: "E-commerce full-stack con Next.js 16, PostgreSQL en Railway y desplegado en Vercel.",
                 ...subdata.ecommercePrivate
             },
