@@ -42,8 +42,8 @@ const subdata = {
     ecommercePrivate: {
         image: "/assets/image-ecomerce.jpeg",
         urls: {
-            link: "https://ecoomerce-umber.vercel.app/",
-            github: "https://ecoomerce-umber.vercel.app/"
+            link: "https://tienda-dxdcode.vercel.app/",
+            github: "https://tienda-dxdcode.vercel.app/"
         },
         technologies: {
              tech: ["Next.js 16", "PostgreSQL", "Railway", "Vercel", "Zod", "TypeScript"]
