@@ -73,7 +73,7 @@ export default function Skills() {
     );
 
     return (
-        <section className="w-full p-4 sm:p-8 bg-background mt-24">
+        <section className="w-full p-4 sm:p-8 bg-background mt-24" id="skills">
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-main text-center">
                 {language === "es" ? "Habilidades" : "Skills"}
             </h2>

@@ -54,6 +54,14 @@ function Navbar() {
                     </li>
                     <li>
                         <a
+                            href="#skills"
+                            className="hover:text-accent transition-colors"
+                        >
+                            {language === "en" ? "Skills" : "Habilidades"}
+                        </a>
+                    </li>
+                    <li>
+                        <a
                             href="#contact"
                             className="hover:text-accent transition-colors"
                         >
