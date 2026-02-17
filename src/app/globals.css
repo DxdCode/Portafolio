@@ -1,98 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* ── DARK THEME (default) ────────────── */
 :root {
-  --background: #F9F8FF;
-  --scroll: #1E1B2E;
-  --card: #ffffff;
-  --text: #1E1B2E;
-  --text-secondary: #4B445B;
-  --accent: #7C3AED;
-  --hover: #A78BFA;
-  --success: #4A6CF7;
-  --error: #DC2626;
-  --warning: #F59E0B;
-  --tecnologias: #35353598;
-}
+  --bg-primary: #1E1B2E;
+  --bg-secondary: #16132A;
+  --bg-card: #252240;
+  --bg-card-hover: #2E2A4A;
 
-.dark {
-  --background: #1E1B2E;
-  --scroll: #F9F8FF;
-  --card: #2C2545;
-  --text: #EDEDED;
+  --text-primary: #EDEDED;
   --text-secondary: #B9B6C9;
+  --text-muted: #6B5F8A;
+
   --accent: #A259FF;
-  --hover: #C084FC;
-  --success: #4A6CF7;
+  --accent-hover: #C084FC;
+  --accent-glow: rgba(162, 89, 255, 0.25);
+  --accent-subtle: rgba(162, 89, 255, 0.08);
+
+  --border: rgba(162, 89, 255, 0.12);
+  --border-hover: rgba(162, 89, 255, 0.3);
+
+  --success: #4ADE80;
   --error: #F87171;
-  --warning: #FBBF24;
-  --tecnologias: #949494a9;
 
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --nav-bg: rgba(30, 27, 46, 0.85);
+  --scrollbar-track: #1E1B2E;
 }
 
-.bg-tecnologias {
-  background-color: var(--tecnologias);
+/* ── LIGHT THEME ─────────────────────── */
+.light {
+  --bg-primary: #F5F3FF;
+  --bg-secondary: #EDE9FE;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F3F0FF;
+
+  --text-primary: #1E1B2E;
+  --text-secondary: #4B445B;
+  --text-muted: #7C7494;
+
+  --accent: #7C3AED;
+  --accent-hover: #6D28D9;
+  --accent-glow: rgba(124, 58, 237, 0.2);
+  --accent-subtle: rgba(124, 58, 237, 0.06);
+
+  --border: rgba(124, 58, 237, 0.15);
+  --border-hover: rgba(124, 58, 237, 0.35);
+
+  --nav-bg: rgba(245, 243, 255, 0.85);
+  --scrollbar-track: #F5F3FF;
 }
 
-.bg-background {
-  background-color: var(--background);
+/* ── Base ─────────────────────────────── */
+* {
+  box-sizing: border-box;
 }
 
-.bg-scroll {
-  background-color: var(--scroll);
-
-}
-
-.bg-card {
-  background-color: var(--card);
-}
-
-.text-card {
-  background-color: var(--card);
-}
-
-.text-accent {
-  color: var(--text-accent);
-}
-
-.text-hover {
-  color: var(--text-hover);
-}
-
-.text-main {
-  color: var(--text);
-}
-
-.text-secondary {
-  color: var(--text-secondary);
-}
-
-.bg-accent {
-  background-color: var(--accent);
-}
-
-.hover-bg-accent:hover {
-  background-color: var(--hover);
-}
-
-.text-success {
-  color: var(--success);
-}
-
-.text-error {
-  color: var(--error);
-}
-
-.text-warning {
-  color: var(--warning);
-}
-
-.bg-button {
-  background-color: var(--success);
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--background);
+  background-color: var(--bg-primary);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+::selection {
+  background: var(--accent);
+  color: white;
+}
+
+/* ── Scrollbar ────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 99px;
+}
+
+/* ── Grid background ─────────────────── */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(162, 89, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(162, 89, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ── Glow effect ──────────────────────── */
+.glow-accent {
+  box-shadow: 0 0 30px var(--accent-glow), 0 0 60px rgba(162, 89, 255, 0.1);
+}
+
+.glow-text {
+  text-shadow: 0 0 40px var(--accent-glow);
+}
+
+/* ── Gradient text ────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Dot rating ────────────────────────── */
+.dot-filled {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.dot-empty {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1.5px solid var(--text-muted);
+}
+
+/* ── Divider line ─────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.3;
+}
+
+/* ── Animations (lightweight) ─────────── */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+
+
+
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 2s infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+
+
+
+
+
+
+/* ── Section separator ────────────────── */
+section+section {
+  border-top: 1px solid var(--border);
+}
+
+/* ── Light mode SVG invert ────────────── */
+.light .svg-icon-adaptive {
+  filter: brightness(0) saturate(100%);
+}
+
+/* ── New Premium Utilities ────────────── */
+
+/* ── Text Outline ─────────────────────── */
+.text-outline {
+  -webkit-text-stroke: 1px var(--text-primary);
+  color: transparent;
+}
+
+.light .text-outline {
+  -webkit-text-stroke: 1px var(--text-primary);
+  color: transparent;
 }
