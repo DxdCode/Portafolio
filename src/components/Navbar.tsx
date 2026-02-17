@@ -30,6 +30,7 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
+        // eslint-disable-next-line
         setIsMobileMenuOpen(false);
     }, [pathname]);
 

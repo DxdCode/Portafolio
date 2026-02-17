@@ -17,6 +17,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
     useEffect(() => {
         const storedLang = localStorage.getItem('language');
+        // eslint-disable-next-line
         if (storedLang) setLanguage(storedLang);
 
         const storedTheme = localStorage.getItem('theme');

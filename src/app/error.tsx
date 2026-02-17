@@ -9,7 +9,10 @@ export default function Error({
     error: Error;
     reset: () => void;
 }) {
-    useEffect(() => console.error(error), [error]);
+    useEffect(() => {
+        // eslint-disable-next-line no-console
+        console.error(error);
+    }, [error]);
 
     return (
         <div className="flex h-screen w-full relative overflow-hidden" style={{ background: 'var(--bg-primary)' }}>

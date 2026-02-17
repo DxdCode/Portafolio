@@ -110,7 +110,7 @@ export default function TechnologiesPage() {
                         <div className="mb-16">
                             <h3 className="text-sm font-mono uppercase mb-8 opacity-60 flex items-center gap-4" style={{ color: 'var(--text-primary)' }}>
                                 <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse" />
-                                {t.techTitle} // MODULES: {technologies.length}
+                                {t.techTitle} {'//'} MODULES: {technologies.length}
                             </h3>
 
                             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
@@ -122,7 +122,7 @@ export default function TechnologiesPage() {
                         <div className="mb-16 border-t border-[var(--border)] pt-10">
                             <h3 className="text-sm font-mono uppercase mb-8 opacity-60 flex items-center gap-4" style={{ color: 'var(--text-primary)' }}>
                                 <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse" />
-                                {t.toolsTitle} // MODULES: {tools.length}
+                                {t.toolsTitle} {'//'} MODULES: {tools.length}
                             </h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
                                 {tools.map((tool, i) => renderSkillCard(tool, i, 'TOOL'))}
@@ -133,7 +133,7 @@ export default function TechnologiesPage() {
                         <div className="mb-16 border-t border-[var(--border)] pt-10">
                             <h3 className="text-sm font-mono uppercase mb-8 opacity-60 flex items-center gap-4" style={{ color: 'var(--text-primary)' }}>
                                 <span className="w-2 h-2 bg-[var(--accent)] rounded-full animate-pulse" />
-                                {t.softTitle} // MODULES: {soft.length}
+                                {t.softTitle} {'//'} MODULES: {soft.length}
                             </h3>
                             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
                                 {soft.map((skill, i) => renderSkillCard(skill, i, 'SOFT'))}
