@@ -21,7 +21,7 @@ const shared = {
         technologies: ["Next.js 16", "PostgreSQL", "Railway", "Vercel", "Zod", "TypeScript"],
         urls: {
             live: "https://tienda-dxdcode.vercel.app/",
-            github: "https://tienda-dxdcode.vercel.app/",
+            github: "https://github.com/DxdCode/Ecoomerce/",
         },
     },
     matriculas: {
